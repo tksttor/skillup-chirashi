@@ -15,7 +15,6 @@
     position:relative;
   }
 
-  /* ── Stars ── */
   .star {
     position:absolute; pointer-events:none;
     color:var(--c,#FFE566); font-size:var(--sz,11px);
@@ -27,55 +26,52 @@
     50%    {opacity:.55;transform:scale(1.25) rotate(18deg);}
   }
 
-  /* ── Header ── */
+  /* ── Header：全体をコンパクトに ── */
   .header {
     text-align:center;
-    padding-top:12px;
+    padding-top:10px;
     flex-shrink:0;
-    position:relative;
-    z-index:10;
+    position:relative; z-index:10;
   }
   .date-badge {
     display:inline-block;
     background:linear-gradient(90deg,#F9A8C9,#F0A0D0);
-    color:white; font-size:16px; font-weight:700;
+    color:white; font-size:17px; font-weight:700;
     padding:5px 22px; border-radius:20px;
-    margin-bottom:6px; letter-spacing:1px;
+    margin-bottom:4px; letter-spacing:1px;
     box-shadow:0 3px 12px rgba(249,168,201,.45);
   }
   .title-with-logo {
     display:inline-flex; align-items:center; gap:14px;
   }
   .title-main {
-    font-size:68px; font-weight:900;
+    font-size:72px; font-weight:900;
     color:#2D1B4E; letter-spacing:10px; line-height:1;
     white-space:nowrap;
   }
   .logo-img {
-    width:72px; height:72px;
+    width:74px; height:74px;
     object-fit:contain; background:transparent;
   }
   .title-deco {
     display:flex; align-items:center; justify-content:center;
-    gap:10px; margin:5px 0;
+    gap:10px; margin:4px 0 2px;
   }
-  .title-deco-line { width:60px; height:1.5px; background:linear-gradient(90deg,transparent,#F0C0D8); }
+  .title-deco-line { width:55px; height:1.5px; background:linear-gradient(90deg,transparent,#F0C0D8); }
   .title-deco-line.rev { background:linear-gradient(90deg,#F0C0D8,transparent); }
   .title-deco-flowers { color:#F9A8C9; font-size:14px; letter-spacing:5px; }
-  .title-sub {
-    font-size:14px; color:#9B8FA6; letter-spacing:7px; margin-top:2px;
-  }
+  .title-sub { font-size:14px; color:#9B8FA6; letter-spacing:7px; }
 
   /* ── Timeline ── */
   .timeline {
     display:flex; align-items:stretch;
-    padding:10px 14px 0 14px;
+    padding:8px 12px 0 12px;
     flex:1; min-height:0;
     gap:0; position:relative; z-index:10;
   }
   .timeline-connector {
     display:flex; align-items:center; justify-content:center;
-    width:28px; flex-shrink:0;
+    width:24px; flex-shrink:0;
   }
   .arrow {
     width:100%; height:2px;
@@ -89,89 +85,96 @@
 
   /* ── Cards ── */
   .time-card {
-    background:white; border-radius:16px;
-    padding:14px 16px 12px;
+    background:white; border-radius:14px;
+    padding:10px 14px 10px;
     flex:1; min-width:0;
     display:flex; flex-direction:column;
-    box-shadow:0 4px 20px rgba(0,0,0,.07);
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
     position:relative; overflow:hidden;
   }
   .time-card::before {
     content:''; position:absolute; top:0; left:0; right:0;
-    height:5px; border-radius:16px 16px 0 0;
+    height:5px; border-radius:14px 14px 0 0;
   }
   .card-pink::before  { background:linear-gradient(90deg,#F9A8C9,#F0A0D0); }
   .card-blue::before  { background:linear-gradient(90deg,#88BBFF,#B0CCFF); }
   .card-mint::before  { background:linear-gradient(90deg,#A8E6CF,#80D5B0); }
 
-  .card-icon { position:absolute; top:12px; right:12px; font-size:20px; opacity:.38; }
+  .card-icon { position:absolute; top:10px; right:12px; font-size:20px; opacity:.38; }
 
-  .time-header { display:flex; align-items:baseline; gap:4px; margin-top:8px; margin-bottom:4px; }
-  .time-label { font-size:46px; font-weight:900; color:#2D1B4E; letter-spacing:-1px; line-height:1; }
-  .time-tilde { font-size:26px; color:#9B8FA6; font-weight:300; }
+  .time-header { display:flex; align-items:baseline; gap:4px; margin-top:6px; margin-bottom:3px; }
+  /* ★ 時刻を大きく */
+  .time-label { font-size:52px; font-weight:900; color:#2D1B4E; letter-spacing:-1px; line-height:1; }
+  .time-tilde { font-size:28px; color:#9B8FA6; font-weight:300; }
 
   .time-duration {
-    display:inline-block; font-size:13px; font-weight:700; color:white;
-    padding:3px 12px; border-radius:12px; margin-bottom:8px; align-self:flex-start;
+    display:inline-block; font-size:14px; font-weight:700; color:white;
+    padding:3px 12px; border-radius:12px; margin-bottom:6px; align-self:flex-start;
   }
   .card-pink .time-duration { background:#F9A8C9; }
   .card-blue .time-duration { background:#88BBFF; }
   .card-mint .time-duration { background:#80D5B0; }
 
+  /* ★ タイトルも大きく */
   .time-title {
-    font-size:18px; font-weight:700; color:#2D1B4E;
-    line-height:1.5; margin-bottom:8px; flex-shrink:0;
+    font-size:20px; font-weight:700; color:#2D1B4E;
+    line-height:1.45; margin-bottom:6px; flex-shrink:0;
   }
   .time-detail {
-    display:flex; flex-wrap:wrap; gap:5px; margin-top:auto; padding-bottom:4px;
+    display:flex; flex-wrap:wrap; gap:5px; margin-top:auto;
   }
+  /* ★ タグも大きく */
   .tag {
-    font-size:13px; padding:4px 10px; border-radius:8px;
+    font-size:14px; padding:4px 11px; border-radius:8px;
     font-weight:500; color:#5C4A6E;
   }
   .card-pink .tag { background:#FDF0F7; }
   .card-blue .tag { background:#EFF5FF; }
   .card-mint .tag { background:#EDFAF5; }
 
-  /* ── 15:30 終了テキスト（カードと草むらの間） ── */
+  /* ── 15:30 終了テキスト（カードと草むらの間の独立した帯） ── */
   .end-bar {
     flex-shrink:0;
+    height:38px;
     display:flex; align-items:center; justify-content:center;
-    gap:14px;
-    padding:7px 0 5px;
+    gap:16px;
     position:relative; z-index:10;
+    margin:0 12px;
   }
-  .end-line { width:80px; height:1px; background:linear-gradient(90deg,transparent,#DDD0E8); }
+  .end-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,#DDD0E8); }
   .end-line.rev { background:linear-gradient(90deg,#DDD0E8,transparent); }
   .end-text {
-    font-size:26px; font-weight:900; color:#2D1B4E; letter-spacing:4px;
+    font-size:28px; font-weight:900; color:#2D1B4E; letter-spacing:4px;
+    white-space:nowrap;
   }
-  .end-sub { font-size:15px; color:#9B8FA6; letter-spacing:3px; font-weight:500; }
+  .end-sub { font-size:17px; color:#9B8FA6; letter-spacing:3px; font-weight:600; }
 
-  /* ── Grass ── */
+  /* ── Grass（草むらは一番下の固定帯） ── */
   .grass-layer {
-    position:absolute; bottom:0; left:0; right:0;
-    pointer-events:none; z-index:15;
+    flex-shrink:0;
+    height:62px;
+    position:relative; z-index:15;
+    overflow:hidden;
   }
-  .grass-layer svg { display:block; width:1024px; height:auto; }
+  .grass-layer svg { display:block; width:1024px; height:62px; }
 
   /* ── Cherry tree ── */
   .cherry-tree {
     position:absolute; bottom:0; right:0;
     z-index:16; pointer-events:none;
-    width:195px; height:auto;
+    width:188px; height:auto;
   }
 
   /* ── Rabbit ── */
   .rabbit-wrapper {
-    position:absolute; bottom:44px; left:-80px;
+    position:absolute; bottom:42px; left:-80px;
     z-index:17; pointer-events:none;
     animation:rabbit-move 13s linear infinite;
   }
   @keyframes rabbit-move { 0%{transform:translateX(0);} 100%{transform:translateX(1150px);} }
   .rabbit-hop { animation:rabbit-hop .38s ease-in-out infinite alternate; }
   @keyframes rabbit-hop {
-    0%  {transform:translateY(0)    rotate(-2deg);}
+    0%  {transform:translateY(0)   rotate(-2deg);}
     100%{transform:translateY(-9px) rotate(2deg);}
   }
   .rabbit-hop svg { transform:scaleX(-1); }
@@ -185,7 +188,7 @@
     0%  {opacity:0;  transform:translateY(0)    translateX(0)              rotate(0deg);}
     6%  {opacity:.85;}
     92% {opacity:.70;}
-    100%{opacity:0;  transform:translateY(850px) translateX(var(--dx,60px)) rotate(var(--spin,540deg));}
+    100%{opacity:0;  transform:translateY(820px) translateX(var(--dx,60px)) rotate(var(--spin,540deg));}
   }
   @keyframes flutter {
     0%,100%{transform:translate(0,0)      rotate(-4deg);}
@@ -264,7 +267,7 @@
 
 </div>
 
-<!-- 15:30 終了 テキスト（草むらとカードの間） -->
+<!-- 15:30 終了（カードと草むらの間・独立帯） -->
 <div class="end-bar">
   <div class="end-line"></div>
   <span class="end-text">15:30</span>
@@ -272,35 +275,35 @@
   <div class="end-line rev"></div>
 </div>
 
-<!-- Grass -->
+<!-- Grass（flex の一部として下端に固定） -->
 <div class="grass-layer">
-  <svg viewBox="0 0 1024 88" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,34 C70,14 140,40 220,26 C300,12 370,36 450,22 C530,8 600,30 690,18 C780,6 850,28 940,16 C990,6 1010,26 1024,18 L1024,88 L0,88 Z" fill="#8DD68F"/>
-    <path d="M0,46 C90,26 180,52 270,38 C360,24 450,50 540,34 C630,18 720,44 810,30 C900,16 970,40 1024,28 L1024,88 L0,88 Z" fill="#5DBB63"/>
+  <svg viewBox="0 0 1024 62" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,22 C70,6 140,28 220,16 C300,4 370,24 450,12 C530,0 600,18 690,8 C780,-2 850,16 940,6 C990,-2 1010,14 1024,8 L1024,62 L0,62 Z" fill="#8DD68F"/>
+    <path d="M0,32 C90,14 180,36 270,24 C360,12 450,34 540,20 C630,6 720,28 810,16 C900,4 970,24 1024,14 L1024,62 L0,62 Z" fill="#5DBB63"/>
     <g fill="#44AA48">
-      <path d="M24,44 C22,24 27,16 30,28 C33,16 38,24 36,44Z"/>
-      <path d="M80,42 C78,22 83,14 86,26 C89,14 94,22 92,42Z"/>
-      <path d="M145,44 C143,24 148,16 151,28 C154,16 159,24 157,44Z"/>
-      <path d="M210,40 C208,20 213,12 216,24 C219,12 224,20 222,40Z"/>
-      <path d="M275,44 C273,24 278,16 281,28 C284,16 289,24 287,44Z"/>
-      <path d="M345,43 C343,23 348,15 351,27 C354,15 359,23 357,43Z"/>
-      <path d="M415,41 C413,21 418,13 421,25 C424,13 429,21 427,41Z"/>
-      <path d="M485,44 C483,24 488,16 491,28 C494,16 499,24 497,44Z"/>
-      <path d="M558,41 C556,21 561,13 564,25 C567,13 572,21 570,41Z"/>
-      <path d="M628,44 C626,24 631,16 634,28 C637,16 642,24 640,44Z"/>
-      <path d="M698,42 C696,22 701,14 704,26 C707,14 712,22 710,42Z"/>
-      <path d="M768,43 C766,23 771,15 774,27 C777,15 782,23 780,43Z"/>
-      <path d="M838,41 C836,21 841,13 844,25 C847,13 852,21 850,41Z"/>
-      <path d="M908,44 C906,24 911,16 914,28 C917,16 922,24 920,44Z"/>
-      <path d="M978,42 C976,22 981,14 984,26 C987,14 992,22 990,42Z"/>
+      <path d="M24,32 C22,16 27,10 30,20 C33,10 38,16 36,32Z"/>
+      <path d="M80,30 C78,14 83,8  86,18 C89,8  94,14 92,30Z"/>
+      <path d="M145,32 C143,16 148,10 151,20 C154,10 159,16 157,32Z"/>
+      <path d="M210,28 C208,12 213,6  216,16 C219,6  224,12 222,28Z"/>
+      <path d="M280,32 C278,16 283,10 286,20 C289,10 294,16 292,32Z"/>
+      <path d="M350,30 C348,14 353,8  356,18 C359,8  364,14 362,30Z"/>
+      <path d="M420,32 C418,16 423,10 426,20 C429,10 434,16 432,32Z"/>
+      <path d="M490,30 C488,14 493,8  496,18 C499,8  504,14 502,30Z"/>
+      <path d="M560,32 C558,16 563,10 566,20 C569,10 574,16 572,32Z"/>
+      <path d="M630,30 C628,14 633,8  636,18 C639,8  644,14 642,30Z"/>
+      <path d="M700,32 C698,16 703,10 706,20 C709,10 714,16 712,32Z"/>
+      <path d="M770,30 C768,14 773,8  776,18 C779,8  784,14 782,30Z"/>
+      <path d="M840,32 C838,16 843,10 846,20 C849,10 854,16 852,32Z"/>
+      <path d="M910,30 C908,14 913,8  916,18 C919,8  924,14 922,30Z"/>
+      <path d="M980,32 C978,16 983,10 986,20 C989,10 994,16 992,32Z"/>
     </g>
     <g opacity="0.85">
-      <circle cx="55"   cy="42" r="3.5" fill="white"/><circle cx="55"   cy="42" r="1.6" fill="#FFE566"/>
-      <circle cx="245"  cy="39" r="3.5" fill="white"/><circle cx="245"  cy="39" r="1.6" fill="#FFB3D1"/>
-      <circle cx="435"  cy="41" r="3.5" fill="white"/><circle cx="435"  cy="41" r="1.6" fill="#FFE566"/>
-      <circle cx="620"  cy="39" r="3.5" fill="white"/><circle cx="620"  cy="39" r="1.6" fill="#88BBFF"/>
-      <circle cx="805"  cy="40" r="3.5" fill="white"/><circle cx="805"  cy="40" r="1.6" fill="#FFB3D1"/>
-      <circle cx="990"  cy="41" r="3.5" fill="white"/><circle cx="990"  cy="41" r="1.6" fill="#FFE566"/>
+      <circle cx="55"  cy="28" r="3" fill="white"/><circle cx="55"  cy="28" r="1.4" fill="#FFE566"/>
+      <circle cx="245" cy="26" r="3" fill="white"/><circle cx="245" cy="26" r="1.4" fill="#FFB3D1"/>
+      <circle cx="435" cy="28" r="3" fill="white"/><circle cx="435" cy="28" r="1.4" fill="#FFE566"/>
+      <circle cx="620" cy="26" r="3" fill="white"/><circle cx="620" cy="26" r="1.4" fill="#88BBFF"/>
+      <circle cx="805" cy="28" r="3" fill="white"/><circle cx="805" cy="28" r="1.4" fill="#FFB3D1"/>
+      <circle cx="990" cy="28" r="3" fill="white"/><circle cx="990" cy="28" r="1.4" fill="#FFE566"/>
     </g>
   </svg>
 </div>
@@ -344,7 +347,7 @@
 <!-- Rabbit -->
 <div class="rabbit-wrapper">
   <div class="rabbit-hop">
-    <svg width="60" height="55" viewBox="0 0 66 60" xmlns="http://www.w3.org/2000/svg">
+    <svg width="58" height="53" viewBox="0 0 66 60" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="22" cy="14" rx="5.5" ry="12.5" fill="white" stroke="#E0D0E4" stroke-width="1"/>
       <ellipse cx="22" cy="14" rx="3"   ry="8.5"  fill="#FFCCE0"/>
       <ellipse cx="35" cy="12" rx="5.5" ry="12.5" fill="white" stroke="#E0D0E4" stroke-width="1"/>
@@ -393,7 +396,7 @@ const sColors=['#88BBFF','#FFE566','#FFB3D1'],sChars=['✦','✧','✦','★','�
   if(d.r!==undefined) el.style.right=d.r+'px';
   document.body.appendChild(el);
 });
-[{x:36,y:230},{x:900,y:200},{x:930,y:290}].forEach(b=>{
+[{x:36,y:230},{x:860,y:195},{x:890,y:285}].forEach(b=>{
   const el=document.createElement('div');
   el.style.cssText=['position:absolute',`left:${b.x}px`,`top:${b.y}px`,
     'font-size:18px','opacity:.45','z-index:12','pointer-events:none',
